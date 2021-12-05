@@ -12,4 +12,6 @@ Dotfiles for the Forgotten Sands Sway theme
 
 Apologies, these will all be very messy code wise, as this is still an ongoing project for me.
 
+*(Note: the theme file contained within the "cmus" folder should be placed in "usr/share/cmus/")*
+
 <img title="preview" alt="Theme preview" src="Forgotten_Sands_UnixPorn.png">
