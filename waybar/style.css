@@ -1,0 +1,230 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+ 
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+
+/*
+Polar Night
+nord0  #2e3440
+nord1  #3b4252
+nord2  #434c5e
+nord3  #4c566a
+Snow Storm
+nord4  #d8dee9
+nord5  #e5e9f0
+nord6  #eceff4
+Frost
+nord7  #8fbcbb
+nord8  #88c0d0
+nord9  #81a1c1
+nord10 #5e81ac
+Aurora
+nord11 #bf616a
+nord12 #d08770
+nord13 #ebcb8b
+nord14 #a3be8c
+nord15 #b48ead
+*/
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+ 
+/* Reset all styles */
+
+* {
+    /* color: #ffffff; */
+    border: 5;
+    border-radius: 0;
+    padding: 0 0;
+    font-family:UbuntuMono;
+    font-size: 14px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-bottom: 0px;
+    /* margin-bottom: 2px; */
+    padding-top: 0px;
+    margin-top: 0px;
+    /* margin-bottom: 20px; */
+   }
+
+window#waybar {
+    background: transparent;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+#workspaces {
+    color: #333333;
+    background-color: transparent;
+    /* background-color: #262626; */
+    padding: 0px;
+    padding-bottom: 0;
+}
+
+#workspaces button {
+    color: #666666;
+    /* margin-top: -2px; */
+    font-size: 10px;
+    padding: 0px 0px;
+    /* border-bottom: 1px; */
+    margin: 3px;
+    margin-bottom: 0;
+    margin-bottom: 5px;
+    /* color: transparent; */
+    /* border-color: #ffffff; */
+    /* border-style: solid; */
+    /* margin-top:2px; */
+    /* margin-top: 2px; */
+    background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0px;
+}
+
+#workspaces button.focused {
+    border-color: transparent;
+    /* font-weight: bold; */
+    background-color: transparent;
+    color: #ffffff;
+    /* border-radius: 5px; */
+    /* margin: 0px; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+}
+
+#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #window,#custom-launcher,#custom-power,#custom-pacman,#custom-cmus-reader {
+    color: #ffffff;
+    padding: 4 4px;
+    padding-bottom: 8px;
+    /* margin-top: 100px; */
+    margin-top: 0px;
+    /* border-bottom: 2px; */
+    /* border-style: solid; */
+}
+
+#mode {
+    margin-top: 6px;
+    color: #555555;
+}
+ 
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#clock {
+ color:#ffffff;
+ margin-top: 4px;
+}
+
+#backlight {
+    color: #ebcb8b;
+}
+
+#battery {
+    color: #d8dee9;
+}
+
+#battery.charging {
+    color: #81a1c1;
+}
+
+@keyframes blink {
+    to {
+        color: #4c566a;
+        background-color: #eceff4;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #bf616a;
+    color: #eceff4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    color:#ffffff ;
+}
+
+#memory {
+    color: #ffffff;
+}
+
+#network.disabled {
+    color:#bf616a;
+}
+
+#network{
+    color:#ffffff;
+}
+
+#network.disconnected {
+    color: #bf616a;
+}
+
+#pulseaudio {
+    color: #ffffff;
+}
+
+#pulseaudio.muted {
+    color: #444444;
+}
+
+#temperature {
+    color: #8fbcbb;
+}
+
+#temperature.critical {
+    color: #bf616a;
+}
+
+#idle_inhibitor {
+   color: #ebcb8b;
+}
+
+#tray {
+    /* margin-top: 0px; */
+    margin-bottom: -3px;
+}
+
+#custom-launcher{
+    padding-left: 0;
+    margin-left: 3px;
+    margin-right: 1px;
+    border-style: hidden;
+    font-size: 12pt;
+    margin-top: 0px;    
+}
+
+#custom-power{
+    padding-left: 0px;
+    padding-left: 4px;
+    margin-right: 0px;
+    border-style: hidden;
+    margin-top:1px;
+}
+
+#window{
+    border-style: hidden;
+    margin-top: 4px;  
+}    
+
+#custom-keyboard-layout{
+   color:#d08770;
+}   
+
+#custom-media{
+    color: #ffffff;
+}
+

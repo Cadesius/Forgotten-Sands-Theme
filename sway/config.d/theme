@@ -1,0 +1,38 @@
+# Apply gtk theming
+exec_always ~/.config/sway/scripts/import-gsettings
+
+# Set inner/outer gaps
+# smart_gaps on
+gaps inner 10
+gaps outer 5
+
+# Hide titlebar on windows: 
+default_border none
+
+# Default Font
+font pango:Ubuntu Mono 11
+
+# Thin borders:
+smart_borders on
+
+# Set wallpaper:
+exec ~/.azotebg
+
+# Title format for windows
+for_window [shell="xdg_shell"] title_format "%title (%app_id)"
+for_window [shell="x_wayland"] title_format "%class - %title"
+
+## Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #333333 #333333 #ffffff #00000000   #333333
+client.focused_inactive #333333 #333333 #ffffff #00000000   #333333
+client.unfocused        #333333 #333333 #ffffff #00000000   #333333
+client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+   swaybar_command waybar
+}
