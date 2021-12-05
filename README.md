@@ -10,7 +10,7 @@ Dotfiles for the Forgotten Sands Sway theme
 - **Font**: Ubuntu Mono 11
 - **Wallpaper**: https://unsplash.com/photos/aRGeZa4BeZQ
 
-Apologies, these will all be very messy code wise, as this is still an ongoing project for me.
+Apologies, these will all be very messy code wise, as this is still an ongoing project for me - let me know if I missed anything!
 
 *(Note: the theme file contained within the "cmus" folder should be placed in "usr/share/cmus/")*
 
