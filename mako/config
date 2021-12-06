@@ -1,0 +1,15 @@
+anchor=bottom-right
+font=UbuntuMono
+background-color=#333333EE
+text-color=#ffffff
+width=300
+margin=0,20,20
+padding=10
+border-size=0
+border-color=#262626
+border-radius=0
+default-timeout=10000
+group-by=summary
+
+[grouped]
+format=<b>%s</b>\n%b
